@@ -26,7 +26,7 @@ import ceri.m1ilsen.applicationprojetm1.ui.DoExerciseActivity;
  */
 
 public class ExercisesListViewAdapter extends ArrayAdapter<String> {
-
+//
     public List<String> dataSet;
     Context mContext;
     public int layout;
