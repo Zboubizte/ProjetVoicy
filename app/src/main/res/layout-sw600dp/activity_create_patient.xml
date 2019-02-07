@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="ceri.m1ilsen.applicationprojetm1.ui.CreatePatientActivity"
+        tools:layout_editor_absoluteY="81dp">
+
+        <TextView
+            android:id="@+id/lastName"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:paddingHorizontal="20dp"
+            android:text="Nom"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lastNameField"
+            app:layout_constraintEnd_toStartOf="@+id/lastNameField"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/lastNameField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:ems="8"
+            android:inputType="textPersonName"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/firstNameField"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/firstNameField" />
+
+        <TextView
+            android:id="@+id/firstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:text="Prénom"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/firstNameField"
+            app:layout_constraintEnd_toStartOf="@+id/firstNameField"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/firstNameField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:ems="8"
+            android:inputType="textPersonName"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/loginField"
+            tools:layout_editor_absoluteY="69dp" />
+
+        <TextView
+            android:id="@+id/birthday"
+            android:layout_width="192dp"
+            android:layout_height="29dp"
+            android:paddingHorizontal="20dp"
+            android:text="Date de naissance"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/birthdayField"
+            app:layout_constraintEnd_toStartOf="@+id/birthdayField"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/format"
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+            android:layout_marginBottom="16dp"
+            android:text="(format : dd/yy/mmmm)"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/genreField"
+            app:layout_constraintEnd_toEndOf="@+id/birthday"
+            app:layout_constraintStart_toStartOf="@+id/birthday"
+            app:layout_constraintTop_toBottomOf="@+id/birthday"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/birthdayField"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/dateChooser"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/birthday"
+            tools:layout_editor_absoluteY="130dp" />
+
+        <ImageButton
+            android:id="@+id/dateChooser"
+            android:layout_width="67dp"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/birthdayField"
+            app:srcCompat="@drawable/ic_calendar"
+            tools:layout_editor_absoluteY="132dp" />
+
+        <TextView
+            android:id="@+id/language"
+            android:layout_width="121dp"
+            android:layout_height="34dp"
+            android:paddingHorizontal="20dp"
+            android:text="Langue"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/languageField"
+            app:layout_constraintEnd_toStartOf="@+id/languageField"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Spinner
+            android:id="@+id/languageField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:entries="@array/langues"
+            app:layout_constraintBottom_toTopOf="@+id/loginField"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/loginField" />
+
+        <TextView
+            android:id="@+id/favouriteWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:text="Mot préféré"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/favouriteWordField"
+            app:layout_constraintEnd_toStartOf="@+id/favouriteWordField"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/favouriteWordField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:ems="8"
+            android:inputType="text"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/creerCompte"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/mailField" />
+
+        <TextView
+            android:id="@+id/genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:text="Genre"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/genreField"
+            app:layout_constraintEnd_toStartOf="@+id/genreField"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Spinner
+            android:id="@+id/genreField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:entries="@array/genres"
+            app:layout_constraintBottom_toTopOf="@+id/languageField"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.009"
+            app:layout_constraintStart_toStartOf="@+id/languageField" />
+
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:text="Login"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/loginField"
+            app:layout_constraintEnd_toStartOf="@+id/loginField"
+            app:layout_constraintHorizontal_bias="0.034"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/loginField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:ems="8"
+            android:inputType="text"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/newPasswordField"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/newPasswordField" />
+
+        <TextView
+            android:id="@+id/newPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:text="Mot de passe"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/newPasswordField"
+            app:layout_constraintEnd_toStartOf="@+id/newPasswordField"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/newPasswordField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:ems="8"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toTopOf="@+id/confirmNewPasswordField"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/confirmNewPasswordField" />
+
+        <TextView
+            android:id="@+id/confirmNewPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:text=" Confirmer MDP"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/confirmNewPasswordField"
+            app:layout_constraintEnd_toStartOf="@+id/confirmNewPasswordField"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/confirmNewPasswordField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:ems="8"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toTopOf="@+id/mailField"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/confirmNewPassword" />
+
+        <TextView
+            android:id="@+id/mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:text="Mail"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/mailField"
+            app:layout_constraintEnd_toStartOf="@+id/mailField"
+            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/mailField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:ems="8"
+            android:inputType="textEmailAddress"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/favouriteWordField"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/confirmNewPasswordField" />
+
+        <Button
+            android:id="@+id/creerCompte"
+            android:layout_width="268dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/custom_list"
+            android:onClick="creerCompte"
+            android:text="CREER COMPTE"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="670dp" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

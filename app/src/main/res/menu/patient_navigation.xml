@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/patient_navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Accueil" />
+
+    <item
+        android:id="@+id/patient_navigation_exercises"
+        android:icon="@drawable/ic_exercise"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/patient_navigation_recordings"
+        android:icon="@drawable/ic_listening_recordings"
+        android:title="@string/title_dashboard" />
+
+    <item
+        android:id="@+id/patient_navigation_results"
+        android:icon="@drawable/ic_results"
+        android:title="@string/title_notifications" />
+
+    <item
+        android:id="@+id/patient_navigation_settings"
+        android:icon="@drawable/conf"
+        android:title="Paramètres" />
+
+</menu>
