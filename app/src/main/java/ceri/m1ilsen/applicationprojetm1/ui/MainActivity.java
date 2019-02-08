@@ -24,7 +24,7 @@ import ceri.m1ilsen.applicationprojetm1.language.Language;
 import ceri.m1ilsen.applicationprojetm1.sqlite.MyApplicationDataSource;
 import ceri.m1ilsen.applicationprojetm1.user.Clinician;
 import ceri.m1ilsen.applicationprojetm1.user.Patient;
-
+//MainActivity1
 public class MainActivity extends AppCompatActivity {
     private TextView signUp;
     private Button signIn;
