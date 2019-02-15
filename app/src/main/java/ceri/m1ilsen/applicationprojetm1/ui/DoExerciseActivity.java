@@ -45,8 +45,8 @@ public class DoExerciseActivity extends AppCompatActivity {
     private static final String AUDIO_RECORDER_FILE_EXT_WAV = ".wav";
     private static final String AUDIO_RECORDER_FOLDER = "App/Recordings";
     private static final String AUDIO_RECORDER_TEMP_FILE = "record_temp.raw";
-    private static final int RECORDER_SAMPLERATE = 44100;
-    private static final int RECORDER_CHANNELS = AudioFormat.CHANNEL_IN_STEREO;
+    private static final int RECORDER_SAMPLERATE = 8000;
+    private static final int RECORDER_CHANNELS = AudioFormat.CHANNEL_IN_MONO;
     private static final int RECORDER_AUDIO_ENCODING = AudioFormat.ENCODING_PCM_16BIT;
     short[] audioData;
 
@@ -344,8 +344,6 @@ public class DoExerciseActivity extends AppCompatActivity {
             txtView.setText(++position + "/" + lines.size() + "\n" + lines.get(position-1));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
         }
 
     }
@@ -405,15 +403,15 @@ public class DoExerciseActivity extends AppCompatActivity {
                 try {
                     switch(getIntent().getStringExtra("task")) {
                         case("mots"):
-                            Thread.sleep(5000);
+                            Thread.sleep(1500);
                             break;
 
                         case("phrases"):
-                            Thread.sleep(15000);
+                            Thread.sleep(3000);
                             break;
 
                         case("textes"):
-                            Thread.sleep(30000);
+                            Thread.sleep(4500);
                             break;
 
                         case("custom"):
@@ -501,7 +499,7 @@ public class DoExerciseActivity extends AppCompatActivity {
         long totalAudioLen = 0;
         long totalDataLen = totalAudioLen + 36;
         long longSampleRate = RECORDER_SAMPLERATE;
-        int channels = 2;
+        int channels = 1;
         long byteRate = RECORDER_BPP * RECORDER_SAMPLERATE * channels/8;
 
         byte[] data = new byte[bufferSize];
