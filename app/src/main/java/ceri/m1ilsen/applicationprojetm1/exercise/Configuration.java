@@ -3,7 +3,7 @@ package ceri.m1ilsen.applicationprojetm1.exercise;
 import java.io.File;
 
 /**
- * Created by Laurent on 28/01/2018.
+ * Created by Laurent on 28/01/2018. Test
  */
 
 public class Configuration {
