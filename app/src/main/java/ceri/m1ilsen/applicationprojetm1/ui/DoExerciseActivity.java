@@ -103,15 +103,15 @@ public class DoExerciseActivity extends AppCompatActivity {
                                 try {
                                     switch(getIntent().getStringExtra("task")) {
                                         case("mots"):
-                                            Thread.sleep(5000);
+                                            Thread.sleep(1500);
                                             break;
 
                                         case("phrases"):
-                                            Thread.sleep(15000);
+                                            Thread.sleep(3000);
                                             break;
 
                                         case("textes"):
-                                            Thread.sleep(30000);
+                                            Thread.sleep(4500);
                                             break;
 
                                         case("custom"):
@@ -403,15 +403,15 @@ public class DoExerciseActivity extends AppCompatActivity {
                 try {
                     switch(getIntent().getStringExtra("task")) {
                         case("mots"):
-                            Thread.sleep(1500);
+                            Thread.sleep(5000);
                             break;
 
                         case("phrases"):
-                            Thread.sleep(3000);
+                            Thread.sleep(15000);
                             break;
 
                         case("textes"):
-                            Thread.sleep(4500);
+                            Thread.sleep(30000);
                             break;
 
                         case("custom"):
