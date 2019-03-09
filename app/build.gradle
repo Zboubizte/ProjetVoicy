@@ -21,6 +21,7 @@ android {
 }
 
 dependencies {
+    implementation project(':pocketsphinx-android-5prealpha-release')
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
@@ -33,3 +34,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-maps:11.8.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
 }
+
+ant.importBuild 'assets.xml'
+preBuild.dependsOn(list, checksum)
+clean.dependsOn(clean_assets)

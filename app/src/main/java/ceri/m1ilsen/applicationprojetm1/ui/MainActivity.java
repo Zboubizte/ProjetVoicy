@@ -15,29 +15,79 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.File;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 
 import ceri.m1ilsen.applicationprojetm1.R;
+import ceri.m1ilsen.applicationprojetm1.align.DAP;
+import ceri.m1ilsen.applicationprojetm1.align.TestDAP;
 import ceri.m1ilsen.applicationprojetm1.language.Language;
 import ceri.m1ilsen.applicationprojetm1.sqlite.MyApplicationDataSource;
 import ceri.m1ilsen.applicationprojetm1.user.Clinician;
 import ceri.m1ilsen.applicationprojetm1.user.Patient;
+import edu.cmu.pocketsphinx.Assets;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+{
     private TextView signUp;
     private Button signIn;
     private EditText mail;
     private EditText mdp;
     private TextView forgotPassword;
 
+    File file;
+
+    Button bouton;
+    TextView resultatDAP;
+
     private static final int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 1;
     private static final int MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE = 1;
     private static final int MY_PERMISSIONS_REQUEST_RECORD_AUDIO = 1;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState)
+    {
+       /* super.onCreate(savedInstanceState);
+        setContentView(R.layout.test_dap);
+
+        bouton = findViewById(R.id.boutonDAP);
+        resultatDAP = findViewById(R.id.resText);
+
+        try
+        {
+            Assets assets = new Assets(this);
+            File assetsDir = assets.syncAssets();
+
+            file = new File(assetsDir, "calamar.wav");
+        }
+        catch (IOException e)
+        {
+            System.out.println(e.getMessage());
+        }
+
+        ArrayList<String> text;
+
+        bouton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                DAP dap = new DAP(MainActivity.this);
+                ArrayList<String> text = dap.convertir(file);
+                String res = "";
+
+                for (String s : text)
+                    res += s + "\n";
+
+                resultatDAP.setText(res);
+            }
+        });
+
+        */
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -108,6 +158,7 @@ public class MainActivity extends AppCompatActivity {
                 authentication();
             }
         });
+
     }
 
     private void authentication() {
@@ -242,4 +293,5 @@ public class MainActivity extends AppCompatActivity {
             mdp.setText("");
         }
     }
+
 }

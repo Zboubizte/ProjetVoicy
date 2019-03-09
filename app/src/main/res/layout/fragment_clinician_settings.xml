@@ -1,4 +1,5 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -35,6 +36,17 @@
             android:text="Déposer des fichiers"
             android:textColor="@android:color/black"
             android:textSize="24sp" />
-    </RelativeLayout>
 
+        <Button
+            android:id="@+id/traitementButton"
+            android:layout_width="1000dp"
+            android:layout_height="100dp"
+            android:layout_above="@+id/dropFilesButton"
+            android:layout_marginBottom="22dp"
+            android:background="@drawable/custom_list"
+            android:fontFamily="sans-serif"
+            android:text="Traitements"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
+            </RelativeLayout>
 </FrameLayout>

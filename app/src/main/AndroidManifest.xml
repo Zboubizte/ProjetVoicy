@@ -70,6 +70,8 @@
             android:screenOrientation="user" />
         <activity android:name=".ui.DisplaySignalActivity"
             android:screenOrientation="user" />
+        <activity android:name=".align.TestDAP"
+            android:screenOrientation="user" />
     </application>
 
 </manifest>

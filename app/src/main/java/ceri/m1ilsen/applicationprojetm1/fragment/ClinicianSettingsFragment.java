@@ -9,7 +9,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+
+import junit.framework.Test;
+
 import ceri.m1ilsen.applicationprojetm1.R;
+import ceri.m1ilsen.applicationprojetm1.align.TestDAP;
 import ceri.m1ilsen.applicationprojetm1.ui.DropFilesActivity;
 import ceri.m1ilsen.applicationprojetm1.ui.EditClinicianProfileActivity;
 
@@ -26,6 +31,7 @@ public class ClinicianSettingsFragment extends Fragment {
     private Button editProfileButton;
     private Button dropFilesButton;
     private OnFragmentInteractionListener mListener;
+    private Button traitement;
 
     public ClinicianSettingsFragment() {
         // Required empty public constructor
@@ -71,6 +77,16 @@ public class ClinicianSettingsFragment extends Fragment {
                 startActivity(dropFiles);
             }
         });
+
+        traitement = (Button) view.findViewById(R.id.traitementButton);
+        traitement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent itraitements = new Intent(view.getContext(), TestDAP.class);
+                startActivity(itraitements);
+            }
+        });
+
         return view;
     }
 
